@@ -11,6 +11,16 @@
 		F5A7AD2C2AA5E6690065D60D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7AD2B2AA5E6690065D60D /* ContentView.swift */; };
 		F5A7AD2E2AA5E66B0065D60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A7AD2D2AA5E66B0065D60D /* Assets.xcassets */; };
 		F5A7AD312AA5E66B0065D60D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A7AD302AA5E66B0065D60D /* Preview Assets.xcassets */; };
+		F5A7AD382AA5E7440065D60D /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7AD372AA5E7440065D60D /* ListItem.swift */; };
+		F5A7AD3A2AA5EEB20065D60D /* AddItemLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A7AD392AA5EEB20065D60D /* AddItemLink.swift */; };
+		F5AC50E82AA6F10C00ED9845 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50E72AA6F10C00ED9845 /* ItemDetail.swift */; };
+		F5AC50EA2AA6FE7C00ED9845 /* StressStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50E92AA6FE7C00ED9845 /* StressStepper.swift */; };
+		F5AC50EC2AA7065F00ED9845 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50EB2AA7065F00ED9845 /* ItemRow.swift */; };
+		F5AC50EE2AA7107700ED9845 /* ProductivityChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50ED2AA7107700ED9845 /* ProductivityChart.swift */; };
+		F5AC50F02AA710DB00ED9845 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50EF2AA710DB00ED9845 /* ItemList.swift */; };
+		F5AC50F22AA73D0D00ED9845 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50F12AA73D0D00ED9845 /* ChartData.swift */; };
+		F5AC50F42AA788EC00ED9845 /* ItemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50F32AA788EC00ED9845 /* ItemListModel.swift */; };
+		F5AC50F82AA7954000ED9845 /* DateFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50F72AA7954000ED9845 /* DateFormatStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		F5A7AD2B2AA5E6690065D60D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F5A7AD2D2AA5E66B0065D60D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5A7AD302AA5E66B0065D60D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5A7AD372AA5E7440065D60D /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		F5A7AD392AA5EEB20065D60D /* AddItemLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemLink.swift; sourceTree = "<group>"; };
+		F5AC50E72AA6F10C00ED9845 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		F5AC50E92AA6FE7C00ED9845 /* StressStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StressStepper.swift; sourceTree = "<group>"; };
+		F5AC50EB2AA7065F00ED9845 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
+		F5AC50ED2AA7107700ED9845 /* ProductivityChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductivityChart.swift; sourceTree = "<group>"; };
+		F5AC50EF2AA710DB00ED9845 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		F5AC50F12AA73D0D00ED9845 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		F5AC50F32AA788EC00ED9845 /* ItemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListModel.swift; sourceTree = "<group>"; };
+		F5AC50F72AA7954000ED9845 /* DateFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				F5A7AD292AA5E6690065D60D /* ProductivityAppApp.swift */,
-				F5A7AD2B2AA5E6690065D60D /* ContentView.swift */,
+				F5AC50F52AA78C2B00ED9845 /* Views */,
+				F5AC50E92AA6FE7C00ED9845 /* StressStepper.swift */,
+				F5AC50F62AA78C6200ED9845 /* Models */,
 				F5A7AD2D2AA5E66B0065D60D /* Assets.xcassets */,
 				F5A7AD2F2AA5E66B0065D60D /* Preview Content */,
 			);
@@ -65,6 +87,30 @@
 				F5A7AD302AA5E66B0065D60D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5AC50F52AA78C2B00ED9845 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5AC50EF2AA710DB00ED9845 /* ItemList.swift */,
+				F5AC50EB2AA7065F00ED9845 /* ItemRow.swift */,
+				F5A7AD392AA5EEB20065D60D /* AddItemLink.swift */,
+				F5AC50E72AA6F10C00ED9845 /* ItemDetail.swift */,
+				F5A7AD2B2AA5E6690065D60D /* ContentView.swift */,
+				F5AC50ED2AA7107700ED9845 /* ProductivityChart.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F5AC50F62AA78C6200ED9845 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5AC50F12AA73D0D00ED9845 /* ChartData.swift */,
+				F5AC50F32AA788EC00ED9845 /* ItemListModel.swift */,
+				F5A7AD372AA5E7440065D60D /* ListItem.swift */,
+				F5AC50F72AA7954000ED9845 /* DateFormatStyle.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +183,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5AC50F82AA7954000ED9845 /* DateFormatStyle.swift in Sources */,
+				F5A7AD382AA5E7440065D60D /* ListItem.swift in Sources */,
 				F5A7AD2C2AA5E6690065D60D /* ContentView.swift in Sources */,
+				F5AC50EE2AA7107700ED9845 /* ProductivityChart.swift in Sources */,
 				F5A7AD2A2AA5E6690065D60D /* ProductivityAppApp.swift in Sources */,
+				F5AC50F42AA788EC00ED9845 /* ItemListModel.swift in Sources */,
+				F5AC50EC2AA7065F00ED9845 /* ItemRow.swift in Sources */,
+				F5AC50EA2AA6FE7C00ED9845 /* StressStepper.swift in Sources */,
+				F5AC50F22AA73D0D00ED9845 /* ChartData.swift in Sources */,
+				F5AC50E82AA6F10C00ED9845 /* ItemDetail.swift in Sources */,
+				F5AC50F02AA710DB00ED9845 /* ItemList.swift in Sources */,
+				F5A7AD3A2AA5EEB20065D60D /* AddItemLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

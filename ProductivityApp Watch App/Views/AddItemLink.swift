@@ -17,6 +17,8 @@ struct AddItemLink: View {
                 
             }
             .buttonStyle(.borderedProminent)
+            Spacer()
+                .frame(height: 5.0)
         }
     }
 }

@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ProductivityApp_Watch_AppApp: App {
-    var body: some Scene {
+    @StateObject var itemListModel = ItemListModel()
+
+   @SceneBuilder var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack{
+                ContentView()
+                    .environmentObject(itemListModel)
+            }
         }
     }
 }
