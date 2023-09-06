@@ -21,6 +21,7 @@
 		F5AC50F22AA73D0D00ED9845 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50F12AA73D0D00ED9845 /* ChartData.swift */; };
 		F5AC50F42AA788EC00ED9845 /* ItemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50F32AA788EC00ED9845 /* ItemListModel.swift */; };
 		F5AC50F82AA7954000ED9845 /* DateFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC50F72AA7954000ED9845 /* DateFormatStyle.swift */; };
+		F5EA2E872AA80C24005DA4A7 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EA2E862AA80C24005DA4A7 /* ComplicationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		F5AC50F12AA73D0D00ED9845 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		F5AC50F32AA788EC00ED9845 /* ItemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListModel.swift; sourceTree = "<group>"; };
 		F5AC50F72AA7954000ED9845 /* DateFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatStyle.swift; sourceTree = "<group>"; };
+		F5EA2E862AA80C24005DA4A7 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				F5A7AD292AA5E6690065D60D /* ProductivityAppApp.swift */,
 				F5AC50F52AA78C2B00ED9845 /* Views */,
 				F5AC50E92AA6FE7C00ED9845 /* StressStepper.swift */,
+				F5EA2E862AA80C24005DA4A7 /* ComplicationController.swift */,
 				F5AC50F62AA78C6200ED9845 /* Models */,
 				F5A7AD2D2AA5E66B0065D60D /* Assets.xcassets */,
 				F5A7AD2F2AA5E66B0065D60D /* Preview Content */,
@@ -185,6 +188,7 @@
 			files = (
 				F5AC50F82AA7954000ED9845 /* DateFormatStyle.swift in Sources */,
 				F5A7AD382AA5E7440065D60D /* ListItem.swift in Sources */,
+				F5EA2E872AA80C24005DA4A7 /* ComplicationController.swift in Sources */,
 				F5A7AD2C2AA5E6690065D60D /* ContentView.swift in Sources */,
 				F5AC50EE2AA7107700ED9845 /* ProductivityChart.swift in Sources */,
 				F5A7AD2A2AA5E6690065D60D /* ProductivityAppApp.swift in Sources */,

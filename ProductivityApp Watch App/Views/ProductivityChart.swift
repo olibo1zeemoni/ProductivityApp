@@ -26,20 +26,7 @@ struct ProductivityChart: View {
     
     private var shortDateFormatStyle = DateFormatStyle(dateFormatTemplate: "Md")
     
-    private func updateChartDataRange() {
-        if (highlightedDateIndex - chartDataRange.lowerBound) < 2, chartDataRange.lowerBound > 0 {
-            let newLowerBound = max(0, chartDataRange.lowerBound - 1)
-            let newUpperBound = min(newLowerBound + 6, data.count - 1)
-            chartDataRange = (newLowerBound...newUpperBound)
-            return
-        }
-        if (chartDataRange.upperBound - highlightedDateIndex) < 2, chartDataRange.upperBound < data.count - 1 {
-            let newUpperBound = min(chartDataRange.upperBound + 1, data.count - 1)
-            let newLowerBound = max(0, newUpperBound - 6)
-            chartDataRange = (newLowerBound...newUpperBound)
-            return
-        }
-    }
+  
     
     private var chartData: [ChartData.DataElement] {
         Array(data[chartDataRange.clamped(to: (0...data.count - 1))])
@@ -49,28 +36,7 @@ struct ProductivityChart: View {
         data[chartDataRange.upperBound].id == dataPoint.id
     }
     
-    private var charts : some View {
-        Chart(chartData) { dataPoint in
-            BarMark(x: .value("Date", dataPoint.date), y: .value("Completed", dataPoint.itemsComplete))
-                .foregroundStyle(Color.accentColor)
-                .annotation(position: isLastDataPoint(dataPoint) ? .topLeading : .topTrailing, spacing: 0)
-            {
-                Text("\(dataPoint.itemsComplete, format: .number)")
-                    .foregroundStyle(dataPoint.date == crownOffsetDate ? Color.appYellow : Color.clear)
-            }
-            
-            RuleMark(x: .value("Date", crownOffsetDate, unit: .day))
-                .foregroundStyle(Color.appYellow.opacity(crownPositionOpacity))
-        }
-        .chartXAxis {
-            AxisMarks(format: shortDateFormatStyle)
-        }
-        .chartYAxis {
-            AxisMarks { value in
-                AxisGridLine(stroke: StrokeStyle(lineWidth: 0.5)).foregroundStyle(.gray)
-            }
-        }
-    }
+  
     
     var body: some View {
         charts
@@ -109,4 +75,55 @@ struct ProductivityChart: View {
 
 #Preview {
     ProductivityChart()
+}
+
+
+
+
+extension ProductivityChart {
+    private func updateChartDataRange() {
+        if (highlightedDateIndex - chartDataRange.lowerBound) < 2, chartDataRange.lowerBound > 0 {
+            let newLowerBound = max(0, chartDataRange.lowerBound - 1)
+            let newUpperBound = min(newLowerBound + 6, data.count - 1)
+            chartDataRange = (newLowerBound...newUpperBound)
+            return
+        }
+        if (chartDataRange.upperBound - highlightedDateIndex) < 2, chartDataRange.upperBound < data.count - 1 {
+            let newUpperBound = min(chartDataRange.upperBound + 1, data.count - 1)
+            let newLowerBound = max(0, newUpperBound - 6)
+            chartDataRange = (newLowerBound...newUpperBound)
+            return
+        }
+    }
+}
+
+
+extension ProductivityChart {
+    private var charts : some View {
+        Chart(chartData) { dataPoint in
+            BarMark(x: .value("Date", dataPoint.date), y: .value("Completed", dataPoint.itemsComplete))
+                .foregroundStyle(Color.accentColor)
+                .annotation(position: isLastDataPoint(dataPoint) ? .topLeading : .topTrailing, spacing: 0)
+            {
+                Text("\(dataPoint.itemsComplete, format: .number)")
+                    .foregroundStyle(dataPoint.date == crownOffsetDate ? Color.appYellow : Color.clear)
+            }
+            
+            RuleMark(x: .value("Date", crownOffsetDate, unit: .day))
+                .foregroundStyle(Color.appYellow.opacity(crownPositionOpacity))
+        }
+        .chartXAxis {
+            AxisMarks(format: shortDateFormatStyle, stroke: StrokeStyle(lineWidth: 0))
+            
+                    }
+        .chartYAxis {
+            AxisMarks(position: .automatic, values: .automatic(desiredCount: 6)){ axisValue in
+                AxisGridLine(centered: true, stroke: StrokeStyle(lineWidth: 0.5, lineCap: .butt))
+                AxisValueLabel(centered: true, anchor: .trailing, multiLabelAlignment: nil, collisionResolution: .greedy, offsetsMarks: nil, horizontalSpacing: -10)
+                
+            }
+
+        }
+
+    }
 }
